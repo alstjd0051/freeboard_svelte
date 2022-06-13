@@ -1,12 +1,25 @@
 <script>
-import Hello from "./components/Hello.svelte";
+  let name = 'world';
+  const age = 27;
 
 
-  const name = 'world'
+  function abc() {
+    name = 'minseong'
+  }
+
 </script>
 
 <main>
-  <Hello /> {name}
+  <h1>
+    Hello {name}
+  </h1>
+
+  <h2>
+    {age}
+  </h2>
+  <input type="text" value={name} />
+  <button on:click={abc}>Click</button>
+
 </main>
 
 <style>
@@ -27,7 +40,7 @@ import Hello from "./components/Hello.svelte";
   }
 
   h1 {
-    color: #ff3e00;
+    color: #6b7eeb;
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 100;
